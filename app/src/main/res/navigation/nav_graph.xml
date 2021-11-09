@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/itemFragment">
+
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.empire.habits.ui.items.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.empire.habits.ui.chart.ChartFragment"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/pomodoroFragment"
+        android:name="com.empire.habits.ui.pomodoro.PomodoroFragment"
+        android:label="fragment_pomodoro"
+        tools:layout="@layout/fragment_pomodoro" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.empire.habits.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

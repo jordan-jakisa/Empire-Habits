@@ -1,71 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <ScrollView
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/big_padding"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_word"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/activity_item"
-                android:inputType="textAutoComplete"
-                android:minHeight="@dimen/min_height"
-                android:textSize="18sp" />
+                android:layout_margin="@dimen/big_padding"
+                android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:hint="Description.."
-                android:inputType="textAutoComplete"
-                android:minHeight="@dimen/min_height"
-                android:textSize="18sp" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/addItemTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/add_item_to_your_todo_list"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/saveSIV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_check_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <EditText
+                        android:id="@+id/edit_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/activity_item"
+                        android:inputType="textAutoComplete"
+                        android:minHeight="@dimen/min_height"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-            <TimePicker
-                android:id="@+id/pickTime"
-                style="@style/ThemeOverlay.MaterialComponents.TimePicker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:timePickerMode="spinner" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
 
-            <Button
-                android:id="@+id/choseColor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/choose_color" />
+                    <EditText
+                        android:id="@+id/editDescription"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/activity_description"
+                        android:inputType="textAutoComplete"
+                        android:lines="5"
+                        android:minHeight="@dimen/min_height"
+                        android:textSize="18sp"
+                        />
 
-            <CheckBox
-                android:id="@+id/repeatCheckBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="Repeat Daily" />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-            <Button
-                android:id="@+id/button_save"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/design_default_color_primary_dark"
-                android:text="@string/button_save"
-                android:textColor="@color/buttonLabel" />
+                <TimePicker
+                    android:id="@+id/pickTime"
+                    style="@style/ThemeOverlay.MaterialComponents.TimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:timePickerMode="spinner" />
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
 
-    </ScrollView>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/repeatCheckBox"
+                        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/repeat_daily" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/choseColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/choose_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

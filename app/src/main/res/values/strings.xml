@@ -4,6 +4,70 @@
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
     <string name="add_word">Add word</string>
-    <string name="activity_item">Activity Item...</string>
-    <string name="choose_color">Choose Color</string>
+    <string name="activity_item">Activity Title...</string>
+    <string name="choose_color">Color</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="list">List</string>
+    <string name="chart">Chart</string>
+    <string name="settings">Settings</string>
+    <string name="activity_description">Activity Description..</string>
+    <string name="repeat_daily">Repeat Daily</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="to_do">To-do</string>
+    <string name="chart_helper">After completing an activity check the item \nThe number of times you check an activity/count shall be shown here in a pie chart. \nThe chart will show the activities you have completed. \nIn a sense it will help you to keep track of your habits and balance the activities you do</string>
+    <string name="no_items_helper">
+
+        <b>Add an item to your daily Todo. </b>
+        <b>I will remind you in due time</b>
+    </string>
+    <string name="quote"> <i>"Develop a system for success, When you have a system of habits there is no Failure" </i>   \nAdd an Item to your Todo</string>
+    <string name="activity_performance_chart">Activity Performance Chart</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="set_theme">Set theme</string>
+    <string name="appearance">Appearance</string>
+    <string name="light_theme">light theme</string>
+    <string name="use_24hour_format">Use 24hour Format</string>
+    <string name="notifications_amp_alarms"><![CDATA[Notifications & Alarms]]></string>
+    <string name="reminder_ringtone">Reminder Ringtone</string>
+    <string name="completion_sound">Completion Sound</string>
+    <string name="whistle">Whistle</string>
+    <string name="doink">Doink</string>
+    <string name="snooze_notifications_and_alarms">Snooze Notifications and Alarms</string>
+    <string name="please_leave_this_on_for_the_reminder_to_work">Please leave this on for the reminder to work</string>
+    <string name="notifications_amp_sounds"><![CDATA[Notifications & Sounds]]></string>
+    <string name="will_vibrate_device_on_completing_a_task">Will vibrate device on completing a task</string>
+    <string name="enable_app_haptics">Enable App Haptics</string>
+    <string name="feedback">Feedback</string>
+    <string name="acknowledgments">Acknowledgments</string>
+    <string name="rate_us">Rate us on playstore</string>
+    <string name="licenses">Licenses</string>
+    <string name="about">About</string>
+    <string name="empire_habits_v1_0_0">Empire Habits v1.0.0</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="_25">25</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="add_item_to_your_todo_list">Add Item To Your Todo List</string>
+    <string name="analytics">Analytics</string>
+    <string name="focus_don_t_touch_me">Focus, don\'t touch me.</string>
+    <string name="support">Support</string>
+    <string name="colon">:</string>
+    <string name="description">This is only the beginning to the great things you are going to become one you attain mastery over the things about which you are passionate.</string>
+    <string name="name">Activity Name</string>
+    <string name="todo">To-do</string>
+
 </resources>

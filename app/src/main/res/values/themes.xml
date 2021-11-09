@@ -1,26 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Customize your theme here. -->
-        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
-        <item name="colorAccent">@color/material_on_background_emphasis_high_type</item>
-
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionButtonTheme</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/colorTextOverlay</item>
+        <item name="android:dialogCornerRadius" tools:targetApi="p">20dp</item>
+        <item name="android:itemBackground">@android:color/white</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="floatingActionButtonStyle">@style/floatingActionBar</item>
     </style>
 
-    <style name="word_title">
-        <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:background">@android:color/holo_orange_light</item>
-        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorControlNormal">@color/colorTextOverlay</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:dialogCornerRadius" tools:targetApi="p">20dp</item>
     </style>
+
 </resources>
